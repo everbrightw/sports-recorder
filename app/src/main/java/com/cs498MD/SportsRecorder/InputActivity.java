@@ -459,7 +459,7 @@ public class InputActivity extends Activity implements View.OnClickListener {
 
 
     private void undoSpecificAction(Action action, int position) {
-        Collections.reverse(history);
+
         history.remove(position);
         if (action.getType() == Type.Score) {
             if (action.getTeamName().equals(period.getOthers().getName())) {
@@ -576,8 +576,6 @@ public class InputActivity extends Activity implements View.OnClickListener {
         this.linearLayoutBSheet = findViewById(R.id.periodSheet);
         this.bottomSheetBehavior = BottomSheetBehavior.from(linearLayoutBSheet);
         this.tbUpDown = findViewById(R.id.toggleButton_black);
-
-
 
     }
 
